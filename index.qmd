@@ -13,7 +13,8 @@ Hello! Welcome to my website :) My name is Jonah Sider-Echenberg and I am a Grad
 the university of British Columbia's Masters of Data Science program. I hold a Bachelor's degree in 
 Economics from Carleton University. After my undergrad, I worked at the Bank of Canada as a research 
 assistant in the Department of Financial Stability from 2023 to 2025. And just before my masters, I spent 
-the year travelling around the world! I am hoping to expand my understanding of data, specifically my experience
+the year travelling around the world! 
+I am hoping to expand my understanding of data, specifically my experience
 with machine learning and build on my previous modelling and forecasting work.
 
 
