@@ -2,13 +2,14 @@
 title: "About"
 ---
 
-My name is Jonah Sider-Echenberg and I am a Graduate Student at the University of British Columbia's Masters of Data Science program. 
-When I am not busy studying, you can find me playing soccer, Magic the Gathering, and fidgeting with my espresso machine that just won't 
-pull the coffee right! 
+My name is Jonah Sider-Echenberg and I am a Graduate Student at the University of British Columbia's Masters of Data Science program. I am originally from Ottawa, where I lived for 25 years, but I am now located in beautiful Vancouver! When I am not busy studying, you can find me playing soccer, cheering for FC Barcelona, playing Magic the Gathering, and fidgeting with my espresso machine that just won't pull the coffee right! 
 
 ## Education 
+University of British Columbia | Vancouver, British Columbia
+M.D.S | August 2026 - June 2027
+
 Carleton University | Ottawa, Ontario
-B.A in Economics, specilization in Financial Economics
+B.A in Economics, specialization in Financial Economics |
 September 2018 - June 2023
 
 ## Experience
