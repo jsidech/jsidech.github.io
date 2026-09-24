@@ -1,0 +1,84 @@
+---
+title: "Palmer Penguins: Does Bill Length Predict Body Mass?"
+author: "Jonah Sider-Echenberg"
+date: "2026-09-24"
+---
+
+## Introduction
+
+Penguins come in different shapes and sizes depending on species, and it's
+natural to wonder whether a simple external measurement — bill length — says
+anything about a penguin's overall body mass. In this post I explore that
+question using the Palmer Penguins dataset.
+
+**Data source:** [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/),
+collected by Dr. Kristen Gorman at the Palmer Station Long Term Ecological
+Research Network in Antarctica, and distributed as the `palmerpenguins` R
+package.
+
+```{r}
+#| message: false
+#| warning: false
+library(tidyverse)
+library(palmerpenguins)
+
+penguins <- penguins |>
+  drop_na(bill_length_mm, body_mass_g, species)
+```
+
+The setup chunk above loads the data and drops rows with missing values in
+the columns we need. Warnings and messages are suppressed here on purpose —
+this chunk is just plumbing, not something a reader needs to see.
+
+## Summary statistics by species
+
+Before looking at any relationship, it's worth checking how bill length and
+body mass differ across the three species in the dataset.
+
+```{r}
+summary <- penguins |>
+  group_by(species) |>
+  summarise(
+    mean_bill_length_mm = round(mean(bill_length_mm), 1),
+    sd_bill_length_mm = round(sd(bill_length_mm), 1),
+    mean_body_mass_g = round(mean(body_mass_g), 1),
+    sd_body_mass_g = round(sd(body_mass_g), 1)
+  )
+summary
+```
+
+Gentoo penguins stand out immediately as the heaviest species by a wide
+margin, while Adelie and Chinstrap are closer to each other in body mass
+despite having noticeably different bill lengths.
+
+## Visualizing the relationship
+
+```{r}
+#| label: fig-penguin-mass
+#| fig-cap: "Body mass of penguins by species, plotted against bill length."
+penguins_length_to_mass <- ggplot(
+    data = penguins,
+    mapping = aes(x = bill_length_mm, y = body_mass_g, colour = species)
+  ) +
+  geom_point(size = 2) +
+  geom_smooth(method = "lm", se = FALSE) +
+  xlab("Bill length (mm)") +
+  ylab("Body mass (g)") +
+  labs(colour = "Species") +
+  theme_bw() +
+  theme(text = element_text(size = 18))
+
+penguins_length_to_mass
+```
+
+@fig-penguin-mass shows the scatter plot with a linear trend line fit per
+species. The positive slopes confirm that within every species, longer bills go along 
+with higher body mass. Gentoo penguins occupy a visibly heavier and longer-billed region 
+of the plot than Adelie or Chinstrap.
+
+## Conclusion
+
+Bill length turns out to be a reasonable, if imperfect, predictor of body
+mass — both across species and within species. Species membership matters too:
+knowing only bill length without knowing species would give an incomplete
+picture than looking at the within-species trends shown here.
