@@ -39,7 +39,7 @@ renv::restore()
 ```
 This reads `renv.lock` and installs the exact R package versions used to
 write this site into a project-local library. Start R from the repo root
-(or open the project in RStudio via its `.Rproj` file, if present) so renv
+so renv
 activates automatically.
 
 **4. Render the site** (terminal, from the repo root)
