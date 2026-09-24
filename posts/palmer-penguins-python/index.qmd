@@ -1,7 +1,8 @@
 ---
 title: "Palmer Penguins: Does Bill Length Predict Body Mass?"
+subtitle: "Written in Python"
 author: "Jonah Sider-Echenberg"
-date: 2026-09-24
+date: "2026-09-24"
 ---
 
 ## Introduction

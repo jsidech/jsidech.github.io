@@ -1,5 +1,6 @@
 ---
 title: "Palmer Penguins: Does Bill Length Predict Body Mass?"
+subtitle: "Written in R"
 author: "Jonah Sider-Echenberg"
 date: "2026-09-24"
 ---
