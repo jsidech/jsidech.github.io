@@ -23,8 +23,10 @@ Run these in order. Each block is labeled with where it runs.
 **1. Clone the repository** (terminal)
 ```sh
 git clone https://github.com/jsidech/jsidech.github.io.git
-cd jsidech.github.io
+cd jsidech.github.io 
 ```
+The cd should be into the folder you clone the files into. If not
+named jsidech.github.io, change the directory name
 
 **2. Install Python dependencies** (terminal, from the repo root)
 ```sh
@@ -40,7 +42,8 @@ renv::restore()
 This reads `renv.lock` and installs the exact R package versions used to
 write this site into a project-local library. Start R from the repo root
 so renv
-activates automatically.
+activates automatically. After you run renv::restore() and install,
+exit the R terminal.
 
 **4. Render the site** (terminal, from the repo root)
 ```sh
