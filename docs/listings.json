@@ -1,0 +1,10 @@
+[
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/palmer-penguins-python/index.html",
+      "/posts/palmer-penguins-r/index.html",
+      "/posts/first-weeks/index.html"
+    ]
+  }
+]
